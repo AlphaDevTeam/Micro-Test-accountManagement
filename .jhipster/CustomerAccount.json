@@ -1,0 +1,61 @@
+{
+  "applications": ["inventoryManagement", "accountManagement"],
+  "changelogDate": "20221026220120",
+  "clientRootFolder": "accountManagement",
+  "databaseType": "sql",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "customer_account",
+  "fields": [
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "transactionDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "creditAmount",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "debitAmount",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "balanceAmount",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "transactionID",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "locationCode",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "tenantCode",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": true,
+  "microserviceName": "accountManagement",
+  "name": "CustomerAccount",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityField": "code",
+      "otherEntityName": "customer",
+      "relationshipName": "customer",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}
